@@ -1,0 +1,22 @@
+const todo = (state, action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return {
+        id: action.id,
+        text: action.text,
+        completed: false
+      }
+    default:
+      return state
+  }
+}
+
+const todos = (state = [], action) => {
+  switch (action.type) {
+   
+    default:
+      return state
+  }
+}
+
+export default todos
