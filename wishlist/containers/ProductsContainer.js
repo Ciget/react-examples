@@ -1,19 +1,17 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import ProductList from '../components/ProductList'
+import ProductItem from '../components/ProductItem'
 
 class ProductsContainer extends Component{
 
   render(){
-    console.log(this.props);
     const {products} = this.props;
     
-    return (
-      <ProductList>
+    return (<div>
       {products.map(product=>
-        <ProductItem product={product}></ProductItem>
+        <ProductItem key={product.id} product={product}></ProductItem>
       )}
-      </ProductList>
+      </div>
     )
   }
 }
@@ -29,7 +27,7 @@ class ProductsContainer extends Component{
 
 function mapStateToProps(state) {
   return {
-    products: state.products
+    product: state.products
   }
 }
 
