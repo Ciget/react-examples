@@ -5,8 +5,9 @@ class Header extends Component {
     authButton(){
         
         if (this.props.authenticated) {
-            return <button onClick={}>Sign In</button>;
+            return <button onClick={}>Sign Out</button>;
         }
+        else  return <button onClick={}>Sign in</button>;
     }
     render() {
         return (
