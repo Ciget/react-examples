@@ -1,8 +1,7 @@
-let nextTodoId = 0
-export const addProduct = (id, text) => {
+export const addToCompare = (id, name) => {
   return {
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
+    type: 'ADD_WISH',
+    id,
+    name
   }
 }
