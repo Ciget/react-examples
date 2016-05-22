@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import CommentBox from './CommentBox';
-import CommentList from './CommentList';
+import Header from './header';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <CommentBox/>
-        <CommentList/>
+        <Header/>
+        {this.props.children}
       </div>
     );
   }

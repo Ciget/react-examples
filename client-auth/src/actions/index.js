@@ -1,9 +1,9 @@
-import { SAVE_COMMENT } from './types'
+import axios from 'axios';
+const ROOT_URL = 'http://localhost:3090';
 
-export function saveComment(comment)
+export function signinUser({email, password})
 {
-    return {
-        type: SAVE_COMMENT,
-        payload: comment
+    return function(dispatch){
+        axios.post(`${ROOT_URL}/signin`, {email, password})
     };
 }
