@@ -8,7 +8,13 @@ class Signin extends Component {
             console.log(email, password);  
             this.props.signinUser({email, password});  
         };
-        
+    renderAlert()
+    {
+        if (this.props.errorMessage)
+        {
+            return (<div classNme="allertName">{this.props.errorMessage}</div>);
+        }
+    }
     render() {
         const {handleSubmit, fields:{email, password}} = this.props;
         
@@ -22,12 +28,19 @@ class Signin extends Component {
                     <label>Password: </label>
                     <input className="form-control" {...password}/>
                 </fieldset>
+                {this.renderAlert()}
                 <button action="submit" className="btn btn-primary"> Sign In</button> 
             </form>);
     }
 }
 
+export function mapStateToProps(state)
+{
+    return {errorMessage: state.auth.error}    
+}
+
+
 export default reduxForm({
     form:'signin',
     fields:['email', 'password']
-}, null, actions)(Signin);
+}, mapStateToProps, actions)(Signin);
