@@ -5,14 +5,13 @@ import * as actions from '../../actions';
 class Signin extends Component {
     handleFormSubmit({email, password})
         {
-            console.log(email, password);  
             this.props.signinUser({email, password});  
         };
     renderAlert()
     {
         if (this.props.errorMessage)
         {
-            return (<div classNme="allertName">{this.props.errorMessage}</div>);
+            return (<div className="alert alert-danger">{this.props.errorMessage}</div>);
         }
     }
     render() {
