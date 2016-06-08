@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Header from './header';
+import Cart from './cart';
+import Products from './products';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Products/>
+        <Cart/>
         {this.props.children}
       </div>
     );
