@@ -20,7 +20,7 @@ ReactDOM.render(
           
             <Route path="signin" component={Signin}/>
             <Route path="signup" component={Signup}/>
-            <Route path="feature" component={RequireAuth(Feature)}/>
+           
       </Route>
     </Router>
   </Provider>
