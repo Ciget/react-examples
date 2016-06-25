@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 
 export class App extends Component {
-  constructor() {
+  ComponenWillMount() {
     this.props.Sample = '';
   }
-
   render() {
     return (
       <div> Hi </div>);
