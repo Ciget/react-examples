@@ -7,5 +7,5 @@ export function fetchUsers(){
     return {
         type:FETCH_USERS,
         payload: request
-    };
+    };  
 }

@@ -1,5 +1,9 @@
 export default function({ dispatch})
 {
+    return function()
+    {
+        return function()
+    }
      return next=>action=>{
          
          //if action does not have payload//or the payload does not have a .then property - we dont care about it
