@@ -1,18 +1,15 @@
 import 'babel-polyfill';
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { Router, Route, browserHistory } from 'react-router';
 import App from './containers/App';
 import reduxThunk from 'redux-thunk';
-import * as reducers from './reducers';
+import friendReducer from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStore(friendReducer, applyMiddleware(reduxThunk));
 
-render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={browserHistory}>
-      <Route path="/" component={App} />
-    </Router>
-  </Provider>, document.querySelector('.container'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'));

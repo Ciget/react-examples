@@ -1,4 +1,4 @@
-export default function SampleReducer(state = {}, action) {
+export default function (state = {}, action) {
   switch (action.type) {
     case 'ds':
       return {};

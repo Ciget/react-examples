@@ -2,13 +2,16 @@ import React, { Component, PropTypes } from 'react';
 
 export class App extends Component {
   ComponenWillMount() {
-    this.props.Sample = '';
+    console.log('sdsd');
+    // this.props.Sample = '';
   }
   render() {
     return (
-      <div> Hi </div>);
+      <div> Hi
+      </div>);
   }
 }
 App.propTypes = {
-  Sample: PropTypes.string.isRequired,
+ // Sample: PropTypes.string.isRequired,
+  // children: PropTypes.string,
 };
