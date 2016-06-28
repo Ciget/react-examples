@@ -1,8 +1,16 @@
-export default function (state = {}, action) {
+import { ADD_FRIEND, GET_FRIENDS } from '../actions/constants';
+
+export default function (state = [], action) {
+ // console.log(action);
   switch (action.type) {
-    case 'ds':
-      return {};
+    case GET_FRIENDS:
+      return action.data;
+    case ADD_FRIEND:
+      return {
+
+      };
     default:
-      return state;
+      var t = [...state, ...action];
+      return t;
   }
 }

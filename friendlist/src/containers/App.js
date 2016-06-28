@@ -1,17 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-
+import FriendList from '../components/FriendList';
 export class App extends Component {
   ComponenWillMount() {
-    console.log('sdsd');
-    // this.props.Sample = '';
   }
   render() {
     return (
-      <div> Hi
+      <div>
+        <FriendList />
+        {this.props.children}
       </div>);
   }
 }
 App.propTypes = {
- // Sample: PropTypes.string.isRequired,
-  // children: PropTypes.string,
+  children: PropTypes.string,
 };
