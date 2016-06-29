@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import { FriendItem } from './FriendItem';
 
 class FriendList extends Component {
 
@@ -8,12 +9,9 @@ class FriendList extends Component {
     this.props.getFriends();
   }
 
-  renderFriend(friend) {
-    return (<div key={friend.id}>{friend.name}</div>);
-  }
   render() {
-    return (<div> user list: 
-    {this.props.friends.map(this.renderFriend)}
+    return (<div className="container"> <h2> user list</h2>
+    {this.props.friends.map(friend => <FriendItem item={friend} key={friend.id} />)}
     </div>);
   }
 }
