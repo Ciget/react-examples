@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import { FriendItem } from './FriendItem';
+import FriendItem from './FriendItem';
 
 class FriendList extends Component {
 
