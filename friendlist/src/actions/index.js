@@ -15,6 +15,7 @@ export function deleteFriend(id) {
 }
 
 export function starFriend(id) {
+  console.log('star user' + id);
   return {
     type: STAR_FRIEND,
     id,
@@ -27,10 +28,12 @@ export function getFriends() {
     data: [{
       id: 1,
       name: 'Victor teste',
+      marked: false,
     },
       {
         id: 2,
         name: 'Anton super',
+        marked: false,
       },
     ],
   };
