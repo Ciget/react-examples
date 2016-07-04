@@ -18,7 +18,7 @@ class FriendList extends Component {
 
     render() {
         return (
-            <ul className="friend-list">
+            <ul className="friendList">
                 {this.renderList()}
             </ul>
         );

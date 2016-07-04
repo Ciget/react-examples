@@ -1,6 +1,6 @@
 import { expect } from '../testHelper';
 import * as types from '../../../src/js/constants/ActionTypes';
-import { addFriend, deleteFriend, starFriend } from '../../../src/js/actions/FriendsActions';
+import { addFriend, deleteFriend, starFriend } from '../../../src/js/actions/FriendsAction';
 
 describe('Actions', () => {
 

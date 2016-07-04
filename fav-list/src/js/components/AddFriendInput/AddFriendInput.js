@@ -24,7 +24,7 @@ class AddFriendInput extends Component {
     }
     
     render() {
-        return (<input type="text"
+        return (<input type="text" className='addFriendInput'
         value={this.state.name}
         onChange={this.handleChange}
         onKeyDown={this.handleSubmit} />
