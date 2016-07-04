@@ -11,7 +11,7 @@ class FriendListApp extends Component {
             <div>
                 <h2>Friend list</h2>
                 <AddFriendInput addFriend={actions.addFriend}/>
-                <FriendList friends={friends}/>
+                <FriendList friends={friends} actions={actions}/>
             </div>
         );
     }
@@ -24,7 +24,7 @@ FriendListApp.propTypes = {
 
 function mapStateToProps(state){
     return {
-        friends: state.friends
+        friends: state.friendList.friends
     };
 }
 

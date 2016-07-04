@@ -1,15 +1,20 @@
 import React, {Component, PropTypes} from 'react';
-import {FriendListItem} from '../FriendListItem/FriendListItem';
-
+import FriendListItem from '../FriendListItem/FriendListItem';
+import './FriendList.scss';
 class FriendList extends Component {
-    renderList(){
-        this.props.friends.map((friend) =>
-            (<FriendListItem
-                key={friend.id} 
-                name={friend.name} 
-                starred={friend.isStar}
-                {...this.props.actions} />));
-    }
+
+ renderList() {
+    return this.props.friends.map((friend) =>
+      (
+        <FriendListItem
+          key={friend.id}
+          id={friend.id}
+          name={friend.name}
+          starred={friend.starred}
+          {...this.props.actions} />
+      )
+    );
+  }
 
     render() {
         return (
