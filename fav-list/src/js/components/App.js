@@ -5,7 +5,7 @@ export default class App extends Component {
     return (
       <div className="page-container">
         {this.props.children}
-      </div>
+      </div>  
     );
   }
 }
